@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <form method="post" action="/steps/{{step}}">
+    <center>
+      <div>
+        <h1>{{page_title}}</h1>
+      </div>
+    </center>
+
+    {% csrf_token %} {% for field in form %}
+
+    <label>{{ field.label }}</label>
+
+    {{ field }} {% if field.help_text %}
+    <span>{{ field.help_text }}</span>
+    {% endif %} {% endfor %}
+
+    <div>
+      {% if step > 1 %}
+      <a href="{{ step|add:-1 }}" type="Submit">Back</a> {% endif %}
+    </div>
+
+    <div>
+      <!-- <p>Step: {{step}} - Last Step: {{last_step}}</p> -->
+      {% if step < last_step %} <button type="submit">Next</button>
+      {% comment %}
+      <a href="{{ step|add:1 }}" name="Next"></a>
+      {% endcomment %} {% else %}
+      <button type="submit">Next</button>
+      {% endif %}
+    </div>
+  </form>
+</div>
+{% endblock %}

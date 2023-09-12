@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <div class="container">
+    <form method="post">
+      <div>
+        <h1>J4</h1>
+      </div>
+      <br />
+      {% csrf_token %} {{form.as_p}}
+      <a
+        id="back"
+        class="btn btn-light btn-lg"
+        href="{% url 'jfour_addsubmission' %}"
+        >Back</a
+      >
+      <a id="back" class="btn btn-light btn-lg" href="{% url 'final' %}"
+        >Next</a
+      >
+    </form>
+  </div>
+</center>
+{% endblock %}

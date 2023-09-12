@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <div class="container">
+    <h3 class=""><strong>Directorate Information</strong></h3>
+    <form action="" method="POST" novalidate>
+      {%csrf_token%} {{form.as_p}}
+
+      <a id="back" class="btn btn-light btn-lg" href="{% url 'addsubmission' %}"
+        >Back</a
+      >
+      <input
+        type="submit"
+        value="Next"
+        name=""
+        id=""
+        class="btn btn-dark btn-lg"
+        style="background-color: rgba(38, 36, 36, 0.429)"
+      />
+    </form>
+  </div>
+</center>
+
+{% endblock %}

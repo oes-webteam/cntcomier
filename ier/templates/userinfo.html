@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <h1>User Information</h1>
+  <div class="container">
+    <form action="" method="POST" novalidate>
+      {%csrf_token%} {{form.as_p}}
+      <a id="back" class="btn btn-light btn-lg" href="{% url 'ier-detail' %}"
+        >Back</a
+      >
+      <input
+        type="submit"
+        value="Next"
+        name=""
+        id=""
+        class="btn btn-dark btn-lg"
+        style="background-color: rgba(38, 36, 36, 0.429)"
+      />
+    </form>
+  </div>
+</center>
+
+{% endblock %}

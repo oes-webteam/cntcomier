@@ -1,0 +1,60 @@
+{% load static%}
+<style></style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black p-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}"
+      ><img
+        src="{% static 'img/centcom_pic.jpg' %}"
+        alt="USCENTCOM"
+        class="d-inline-block align-text-top"
+        width="30"
+        height="24"
+      />
+      Information Exchange Requirement
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {% comment %}
+    <div class="d-flex">
+      {% endcomment %}
+      <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="{% url 'home' %}"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Policy</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help Desk</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> Instructions</a>
+          </li>
+          
+        </ul>
+        {% comment %}
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</nav>

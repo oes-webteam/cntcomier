@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+  <center>
+    <h1>Partner Signature Block</h1>
+    <form action="" method="POST" novalidate>
+      {%csrf_token%} {{form.as_p}}
+      <a id="back" class="btn btn-light btn-lg" href="{% url 'signaturecentcom' %}"
+        >Back</a
+      >
+      <input
+        type="submit"
+        value="Submit"
+        name=""
+        id=""
+        class="btn btn-dark btn-lg" style="background-color: rgba(38, 36, 36, 0.429);"
+      />
+    
+    </form>
+</div>
+</center>
+
+{% endblock %}
