@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<center>
+  <div class="container">
+    <form method="post">
+      <div>
+        <h1>J7</h1>
+      </div>
+      <br />
+      {% csrf_token %} {{form.as_p}}
+      <a
+        id="back"
+        class="btn btn-light btn-lg"
+        href="{% url 'jseven_addsubmission' %}"
+        >Back</a
+      >
+      <a id="back" class="btn btn-light btn-lg" href="{% url 'final' %}"
+        >Next</a
+      >
+    </form>
+  </div>
+</center>
+{% endblock %}

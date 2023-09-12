@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+  .sidenav {
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .welcome_container {
+    margin-left: 120px;
+  }
+
+  @media (max-width: 768px) {
+    .sidenav {
+      width: 80px;
+    }
+
+    .welcome_container {
+      margin-left: 80px;
+    }
+  }
+</style>
+
+<center>
+  <div class="sidenav">
+    <a href="/j1">J1</a>
+    <a href="/j2">J2</a>
+    <a href="/j3">J3</a>
+    <a href="/j4">J4</a>
+    <a href="/j5">J5</a>
+    <a href="/j6">J6</a>
+    <a href="/j7">J7</a>
+    <a href="/j8">J8</a>
+    <a href="/cccn">CCCN</a>
+    <a href="/jso">JSO</a>
+    <a href="/ja">JA</a>
+    <a href="/pa">PA</a>
+    <a href="/ig">IG</a>
+    <a href="/sg">SG</a>
+  </div>
+  <center>
+    <h1>J5</h1>
+    <br />
+    <h3>
+      In order to start submitting your application, please click the button
+      below:
+    </h3>
+    <br />
+    <a class="btn btn-success" href="/j5/addsubmission">START APPLICATION</a>
+  </center>
+  {% endblock %}
+</center>
